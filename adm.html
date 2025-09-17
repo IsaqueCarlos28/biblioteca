@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Aula06/CSS/app.css">
+</head>
+<body>
+<body>
+    <header class="header">
+        <nav class="navbar navbar--fixed navbar--dark">
+            <div class="navbar__logo">Logo<img src="" alt=""></div>
+            <div class="navbar__menu ">
+                <a class="navbar__link" href="/Aula06/index.html"> Home Page</a>
+            </div>
+        </nav>
+        <div class="header_content">
+            <h1 class="header_title">Area do Administrador</h1>
+            <h4 class="header_subtitle">Organize sua Biblioteca</h4>
+        </div>
+    </header>
+    <main>
+        <!-- LISTAR LIVRO ADM-->
+        <h2 class> Livros </h2>
+
+        <section class="table-admin">
+            <table  border="1px solid #ddd">
+                <thead class="table-admin thead th">
+                    <th>Id</th>
+                    <th>titulo</th>
+                    <th>categoria</th>
+                    <th>Imagem</th>
+                    <th>Sinopse</th>
+                    <th>Preço</th>
+                    <th>Funções</th>
+                </thead>
+                <TBody id="listarLivros"></TBody>
+            </table>
+        </section>
+
+        <button class="btn btn--large" onclick="showCriar()">Criar Novo Livro</button>
+
+        <!-- Criar livro --> 
+        <div class="criar_editar">
+            <section id="criarLivro">
+                <form class="form-field" id="novoLivro">
+                    <h3 class="adm_title"> Criar </h3>
+                    <ul class="footer__list">
+                        <li>   
+                            <label class="form-field__label" for="titulo">Titulo</label><br>
+                            <input class="form-field__input" type="text" id="titulo" placeholder="Titulo do livro" required>
+                        </li>
+                        <li>
+                            <label  class="form-field__label" for="categoria">Categoria</label><br>
+                            <input  class="form-field__input" type="text" id="categoria" placeholder="Categoria do livro" required>
+                        </li>
+                        <li>
+                            <label class="form-field__label" for="imagem">Capa</label><br>
+                            <input  class="form-field__input" type="file" accept="image/*" id="imagem" placeholder="Imagem do livro" required>
+                        </li>
+                        <li>
+                            <label  class="form-field__label" for="sinopse">Sinopse</label><br>
+                            <input  class="form-field__input" type="text" id="sinopse" placeholder="Sinopse do livro" required>
+                        </li>
+                        <li>
+                            <label class="form-field__label" for="preco">Preço</label><br>
+                            <input  class="form-field__input" type="number" id="preco" placeholder="Preco do livro" required>
+                        </li>
+                        <li>
+                            <button class="form-field__button--primary" type="submit">Criar</button>
+                            <button class="form-field__button--secondary" class="btn btn--danger" onclick="hideCriar()">Cancelar</button>
+                        </li>           
+                    </ul>
+                </form>
+            </section>
+
+            <!-- Editar livro-->
+            <section id="editarLivro"> 
+                <form class="form-field" id="editarLivro">   
+                      <h3 class="adm_title"> Criar </h3>   
+                    <ul class="footer__list">
+                        <li>   
+                            <label class="form-field__label" for="edit_titulo">Titulo</label><br>
+                            <input class="form-field__input" type="text" id="edit_titulo" placeholder="Titulo do livro" required>
+                        </li>
+                        <li>
+                            <label  class="form-field__label" for="edit_categoria">Categoria</label><br>
+                            <input  class="form-field__input" type="text" id="edit_categoria" placeholder="Categoria do livro" required>
+                        </li>
+                        <li>
+                            <label class="form-field__label" for="edit_imagem">Capa</label><br>
+                            <input  class="form-field__input" type="file" id="edit_imagem" accept="image/*" placeholder="Imagem do livro" required>
+                        </li>
+                        <li>
+                            <label  class="form-field__label" for="edit_sinopse">Sinopse</label><br>
+                            <input  class="form-field__input" type="text" id="edit_sinopse" placeholder="Sinopse do livro" required>
+                        </li>
+                        <li>
+                            <label class="form-field__label" for="edit_preco">Preço</label><br>
+                            <input  class="form-field__input" type="number" id="edit_preco" placeholder="Preco do livro" required>
+                        </li>
+                        <li>
+                            <button class="form-field__button--primary" type="submit">Editar</button>
+                            <button class="form-field__button--secondary" class="btn btn--danger" onclick="hideEditar()">Cancelar</button>
+                        </li>           
+                    </ul>   
+                </form>
+            </section> 
+        </div>
+
+        <script src="/Aula06/script.js"></script>
+    </main>
+    <footer class="footer footer--dark footer:hover ">
+        <p class="footer__title">Bilbioteca Melo</p>
+        <section class="footer__top">
+            <div>
+                <p class="footer__subtitle">Sobre Nós</p>
+                <p class="footer__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a class="footer__link " href="">Saiba Mais</a>
+            </div>
+            <div>
+                <p class="footer__subtitle">Ajuda</p>
+                <ul class="footer__list">
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Suporte</a></li>
+                    <li><a href="">Forum</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer__subtitle">Contato</p>
+                <p>lorem_ipsum@gmail.com</p>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <p class="footer__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="footer__social">
+                <a class="" href=""><img src="/Aula06/img/facebook.png"alt=""></a> 
+                <a href=""><img src="/Aula06/img/instagram (1).png"alt=""></a>  
+                <a href=""><img src="/Aula06/img/whatsapp.png"alt=""></a>   
+            </div>
+
+        </section>
+
+    </footer>
+</body>
+</html>

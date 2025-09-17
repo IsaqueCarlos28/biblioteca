@@ -1,0 +1,91 @@
+@import "../variables.css";
+/* 
+ Classe Base: .navbar
+ Estrutura principal da barra de navegação
+ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--navbar-height);
+  padding: 0 20px;
+  font-family: var(--font-family);
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  transition: background-color var(--transition-speed) ease-in-out;
+}
+/* 
+ Elementos
+ */
+/* Logo da livraria */
+.navbar__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* Lista de links do menu */
+.navbar__menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+/* Item da lista (cada <li>) */
+.navbar__item {
+  position: relative; /* Para futuros submenus/dropdowns */
+}
+/* Link dentro do menu */
+.navbar__link {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color var(--transition-speed);
+}
+/* Estados dos links */
+.navbar__link:hover,
+.navbar__link:focus {
+  color: var(--color-secondary); /* Muda a cor ao passar o mouse ou focar */
+}
+/* 
+ Modificadores
+ */
+/* Versão escura da navbar */
+.navbar--dark {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+/* Versão clara da navbar */
+.navbar--light {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+/* Ajusta links no tema claro */
+.navbar--light .navbar__link {
+  color: var(--color-dark); /* Links ficam escuros */
+}
+/* Links no tema claro ao passar o mouse */
+.navbar--light .navbar__link:hover {
+  color: var(--color-primary); /* Mudam para roxo */
+}
+/* Navbar fixa no topo da página */
+.navbar--fixed {
+  position: fixed; /* Fixa na tela */
+  top: 0; /* Gruda no topo */
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Fica acima do conteúdo */
+}
+/* 
+ Responsividade
+ Ajustes para telas menores
+ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Navbar vira coluna */
+    height: auto; /* Altura automática */
+    padding: 10px; /* Menos espaçamento */
+    text-align: center; /* Centraliza o texto */
+  }
+  .navbar__menu {
+    flex-direction: column; /* Links ficam em coluna */
+    gap: 10px; /* Menos espaço entre eles */
+  }
+}

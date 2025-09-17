@@ -1,0 +1,50 @@
+.barra-progresso {
+  background-color: rgb(224, 224, 224);
+  width: 100%;
+  height: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.barra-progress-completo {
+  background-color: rgb(2, 31, 5);
+  height: 100%;
+  width: 0;
+}
+
+/* Modificacao do Texto*/
+
+.barra-texto {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+/* Modificacao de cores */
+
+.sucesso {
+  background-color: rgb(11, 75, 11);
+}
+
+.erro {
+  background-color: rgb(136, 30, 30);
+}
+
+/* Modificacao de tamanho*/
+
+.barra-25 {
+  width: 25%;
+}
+
+.barra-50 {
+  width: 50%;
+}
+
+.barra-75 {
+  width: 75%;
+}
+
+.barra-100 {
+  width: 100%;
+}

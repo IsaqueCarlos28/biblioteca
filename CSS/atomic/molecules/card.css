@@ -1,0 +1,42 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+/* Movimento do Card */
+.card:hover {
+  transform: translateY(-8px);
+}
+/* Imagem do Card */
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Textos */
+.card h1 {
+  font-size: 1.5rem;
+  margin: 16px 20px 8px;
+  color: #333;
+}
+.card h2 {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+.book-card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  gap: 10px;
+  transition: transform 0.2s ease-in-out;
+}

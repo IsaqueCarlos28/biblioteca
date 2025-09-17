@@ -1,0 +1,122 @@
+:root {
+  /* ================= COLORS ================= */
+  /* Primary Colors */
+  --color-primary: #e24a4a;
+  --color-secondary: #50e3c2;
+  --color-dark: #212121;
+  --color-light: #ffffff;
+  --color-white: #ffffff;
+
+  /* Background Colors */
+  --color-bg: #f9f9f9;
+  --color-background: rgb(205, 236, 251);
+  --background-color: #d7d3cda1;
+  --secondary-background-color: #fff;
+
+  /* Text Colors */
+  --color-text: #333;
+  --color-muted: #777;
+  --primary-color: #333;
+
+  /* Alert Colors */
+  --alert-bg-color: #ffffff;
+  --alert-text-color: #721c24;
+  --alert-success-bg: #d4edda;
+  --alert-success-bg-hover: #82f79d;
+  --alert-success-text: #155724;
+  --alert-error-bg: #f8d7da;
+  --alert-error-bg-hover: rgb(255, 131, 141);
+  --alert-error-text: #7b1f28;
+  --alert-warning-bg: #fff3cd;
+  --alert-warning-bg-hover: #fee182;
+  --alert-warning-text: #856404;
+
+  /* Theme Colors */
+  --color-highlight: #019201;
+  --color-badge: #eee;
+  --color-badge-bestseller: rgb(185, 245, 249);
+
+  /* Button Colors */
+  --color-button: rgb(105, 201, 249);
+  --color-button-hover: rgb(73, 114, 201);
+
+  /* Option Colors */
+  --color-option1: #fa1c1c;
+  --color-option2: rgb(255, 221, 27);
+  --color-option3: #451cfa;
+
+  /* Gray Scale */
+  --color-gray-50: #f9fafb;
+  --color-grey-50: #f9fafb;
+  --color-gray-300: #d1d5db;
+  --color-grey-300: #d1d5db;
+  --color-blue-500: #3b82f5;
+  --color-red-500: #ef4444;
+
+  /* Footer Colors */
+  --footer-bg-dark: #121008;
+  --footer-bg-light: #f2f2f2;
+  --footer-text-dark: #f2f2f2;
+  --footer-text-light: #222;
+  --footer-accent: #efad3c;
+
+  /* NavBar Colors */
+  --navbar-primary: #4a148c;
+  --navbar-secondary: #ec2c01;
+
+  /* Utility Colors */
+  --focus-color: #007bff;
+  --close-color: #721c24;
+  --close-hover-color: #5a1a2c;
+
+  /* ================= TYPOGRAPHY ================= */
+  /* Font Families */
+  --font-family: "Segoe UI", sans-serif;
+  --font-family-base: "Arial", sans-serif;
+  --font-main: Arial, sans-serif;
+
+  /* Font Sizes */
+  --font-size-base: 16px;
+  --font-family-sm: 0.5rem;
+  --font-family-lg: 1.75rem;
+
+  /* ================= SPACING ================= */
+  /* Base Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-s: 8px;
+  --spacing-md: 0.75rem;
+  --spacing-m: 16px;
+  --spacing-lg: 1.25rem;
+  --spacing-l: 24px;
+  --spacing-small: 9px;
+
+  /* Space Aliases */
+  --space-small: 8px;
+  --space-medium: 16px;
+  --space-large: 24px;
+
+  /* Option Spacing */
+  --spacing-option1: 1rem;
+  --spacing-option2: 2rem;
+  --spacing-option3: 0.5rem;
+
+  /* Footer Spacing */
+  --footer-padding: 2rem;
+
+  /* ================= BORDER RADIUS ================= */
+  --border-radius: 8px;
+  --radius-soft: 4px;
+  --radius-medium: 8px;
+  --radius-large: 12px;
+  --radius-option1: 1rem;
+  --radius-option2: 0.75rem;
+  --radius-option3: 2.5rem;
+
+  /* ================= LAYOUT ================= */
+  --navbar-height: 60px;
+
+  /* ================= TRANSITIONS ================= */
+  --transition-speed: 0.3s;
+  --footer-transition: all 0.3s ease;
+}

@@ -1,0 +1,38 @@
+.btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: 2rem;
+  border: 2px solid var(--color-dark);
+  border-radius: 2rem;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--color-gray-50);
+}
+
+.btn__icon {
+  font-size: 1em;
+}
+
+.btn--small {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+.btn--large {
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-lg);
+}
+
+.btn--primary {
+  background-color: var(--color-blue-500);
+  border-color: var(--color-blue-500);
+  color: var(--color-white);
+}
+.btn--danger {
+  background-color: var(--color-red-500);
+  border-color: var(--color-red-500);
+  color: var(--color-white);
+}

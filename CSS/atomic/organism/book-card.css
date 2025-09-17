@@ -1,0 +1,21 @@
+/* ================= MOLECULA: Card de Livro ================= */
+
+.book-card {
+  background: #fff; /* fundo branco */
+  padding: var(--space-medium); /* espaçamento interno */
+  border-radius: var(--border-radius); /* bordas arredondadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra leve */
+  display: flex; /* imagem + texto lado a lado */
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Área de informações do livro */
+.book-info {
+  flex: 1; /* ocupa o máximo de espaço */
+}
+
+/* Card destacado (featured) */
+.book-card--featured {
+  border: 2px solid var(--color-highlight);
+}

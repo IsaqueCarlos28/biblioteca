@@ -1,0 +1,84 @@
+/*Leonardo Damasceno Dias. Renan Silva Nunes*/
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/*  ESTILOS DO HEADER  */
+.header {
+  /* Define a imagem de fundo */
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg");
+
+  /* Garante que a imagem cubra todo o bloco */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Define a altura do header */
+  min-height: 50vh;
+
+  /* Usando Flexbox para centralizar o conteúdo vertical e horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Cor do texto e sombra */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(98, 97, 97, 0.6);
+}
+
+/* ESTILOS DOS ELEMENTOS DO CONTAINER */
+.header_content {
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+/* ESTILO DO TITÚLO */
+.header_title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+/* ESTILO DO SUBTITÚLO */
+.header_subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+/* ESTILOS DO BOTÃO */
+.button_header {
+  display: inline-block;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 5px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button_header--primary {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+.button_header--primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Efeito de "levantar" ao passar o mouse */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+  .header_title {
+    font-size: 2.5rem;
+  }
+
+  .header_subtitle {
+    font-size: 1.2rem;
+  }
+}

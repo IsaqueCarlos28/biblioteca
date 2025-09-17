@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Corpo do html */
+body {
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+/* Títulos */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+/* Botão primário */
+.btn {
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+.btn:hover {
+  background-color: #004ecc;
+}
+/* Botão fechar */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+.close-btn:hover {
+  color: #000;
+}
+/* Checkbox invisível */
+input[type="checkbox"] {
+  display: none;
+}

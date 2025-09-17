@@ -1,0 +1,70 @@
+.txt {
+  font-family: var(--font-family-base);
+  margin: 1em;
+}
+/* elementos */
+/* modificadores */
+.txt--italic {
+  font-style: italic;
+}
+.txt--bolder {
+  font-weight: bolder;
+}
+.txt--underline {
+  text-decoration: underline;
+}
+.txt--smal {
+  font-size: var(--font-size-sm);
+}
+.txt--medium {
+  font-size: var(--font-size-md);
+}
+.txt--large {
+  font-size: var(--font-size-lg);
+}
+.txt--left {
+  text-align: left;
+}
+.txt--center {
+  text-align: center;
+}
+.txt--justify {
+  text-align: justify;
+}
+.txt--end {
+  text-align: end;
+}
+.txt--common {
+  color: var(--color-black);
+}
+.txt--warning {
+  color: var(--color-yellow);
+  background-color: var(--background-color-black);
+}
+.txt--danger {
+  color: var(--color-white);
+  background-color: var(--background-color-red);
+}
+.book-title {
+  font-size: var(--font-family-lg);
+  color: var(--color-dark);
+}
+.book-author {
+  font-size: var(--font-family-base);
+  color: var(--color-secondary);
+}
+.book-price {
+  font-size: var(--font-family-base);
+  font-weight: bold;
+  color: var(--color-red-500);
+}
+.book-image {
+  width: 1px;
+  height: 1px;
+}
+.badge {
+  display: inline-block;
+  padding: var(--spacing-xs);
+  font-size: var(--font-family-sm);
+  color: var(--color-red-500);
+}

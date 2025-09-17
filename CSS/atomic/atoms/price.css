@@ -1,0 +1,43 @@
+.price-tag {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.price-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 220px;
+}
+
+.price-card__title {
+  margin-bottom: 1rem;
+  font-size: 3.25rem;
+  color: #34495e;
+}
+
+.price-card__price {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.prices-list {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.prices-list__title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.prices-list__cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

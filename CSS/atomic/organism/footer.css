@@ -1,0 +1,126 @@
+@import "../variables.css";
+/* ---------- Bloco Base (footer) ---------- */
+/* Define estrutura inicial do rodapé */
+.footer {
+  background: var(--footer-bg-dark);
+  color: var(--footer-text-dark);
+  padding: var(--footer-padding);
+  font-family: Arial, sans-serif;
+  transition: var(--footer-transition);
+}
+/* Estado hover no bloco */
+/* Ao passar o mouse, cria efeito gradiente no fundo */
+.footer:hover {
+  background: linear-gradient(135deg, var(--footer-bg-dark), #2a250e);
+}
+/* ---------- Elementos do Footer ---------- */
+/* Container superior: organiza colunas do rodapé */
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+/* Título principal do rodapé (nome da empresa) */
+.footer__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+/* Subtítulos das seções (ex: Sobre Nós, Ajuda, Contato) */
+.footer__subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+/* Texto descritivo da empresa */
+.footer__desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+/* Link destacado (Saiba mais...) */
+.footer__link {
+  color: var(--footer-accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Lista de links (Sobre, Suporte, etc.) */
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+/* Espaçamento entre os itens da lista */
+.footer__list li {
+  margin-bottom: 0.5rem;
+}
+/* Links da lista com transição suave */
+.footer__list a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--footer-transition);
+}
+/* Efeito hover nos links da lista */
+.footer__list a:hover {
+  color: var(--footer-accent);
+  transform: translateX(5px); /* animação de movimento lateral */
+}
+/* ---------- Parte inferior do Footer ---------- */
+/* Seção inferior: redes sociais + direitos autorais */
+.footer__bottom {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  text-align:center;
+}
+/* Ícones de redes sociais */
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin:0, 0, 3rem, 0.5rem;
+}
+/* Estilo dos ícones sociais */
+.footer__social a {
+  font-size: 1.4rem;
+  transition: var(--footer-transition);
+}
+.footer__social img {
+  width: 40px;
+  height: 40px;
+}
+/* Animação nos ícones ao passar o mouse */
+.footer__social a:hover {
+  color: var(--footer-accent);
+  transform: scale(1.2) rotate(8deg);
+}
+/* Texto de direitos autorais */
+.footer__copy {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+/* ---------- Modificadores ---------- */
+/* Variações de estilo do componente, mantendo consistência */
+/* Tema escuro (default) */
+.footer--dark {
+  background: var(--footer-bg-dark);
+  color: var(--footer-text-dark);
+}
+/* Tema claro */
+.footer--light {
+  background: var(--footer-bg-light);
+  color: var(--footer-text-light);
+}
+/* Versão compacta (menos espaçamento e fonte menor) */
+.footer--compact {
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+/* ---------- Responsividade ---------- */
+/* Ajusta layout para telas pequenas (celulares) */
+@media (max-width: 600px) {
+  .footer__top {
+    grid-template-columns: 1fr; /* colunas empilhadas */
+  }
+}

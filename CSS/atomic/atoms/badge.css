@@ -1,0 +1,35 @@
+@import "../variables.css";
+
+.badge {
+  background-color: var(--color-option1);
+  color: var(--color-primary);
+  padding: var(--spacing-option3);
+  border-radius: var(--radius-option2);
+  font-size: var(--font-family-lg);
+  font-weight: bold;
+}
+
+.badge1 {
+  background-color: var(--color-option1);
+  color: var(--color-primary);
+  padding: var(--spacing-option1);
+  border-radius: var(--radius-option1);
+  font-size: var(--font-family-lg);
+  font-weight: bold;
+}
+.badge2 {
+  background-color: var(--color-option2);
+  color: var(--color-primary);
+  padding: var(--spacing-option2);
+  border-radius: var(--radius-option2);
+  font-size: var(--font-family-base);
+  font-weight: bold;
+}
+.badge3 {
+  background-color: var(--color-option3);
+  color: var(--color-primary);
+  padding: var(--spacing-option2);
+  border-radius: var(--radius-option3);
+  font-size: var(--font-family-base);
+  font-weight: bold;
+}

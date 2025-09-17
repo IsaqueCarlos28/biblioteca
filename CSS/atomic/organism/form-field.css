@@ -1,0 +1,80 @@
+/* ================= ORGANISMO: Form-Field ================= */
+@import "../variables.css";
+
+.form-field {
+  background-color:var(--color-white);
+
+  gap: var(--space-small);
+  margin: var(--space-large);
+  padding:var(--space-large);
+  border-radius: 1rem;
+  border: 1px solid var(--color-dark);
+}
+
+/* Rótulo */
+.form-field__label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: var(--space-small);
+}
+
+/* Input */
+.form-field__input {
+  flex: 1;
+  padding: var(--space-small);
+  border: 1px solid var(--color-dark);
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+/* Estado de foco no input */
+.form-field__input:focus {
+  outline: none;
+  border: 1px solid var(--color-highlight);
+}
+
+/* Botão base */
+.form-field__button {
+  padding: var(--space-small) var(--space-medium);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+/* Botão primário */
+.form-field__button--primary {
+  background-color: var(--color-grey-300);
+  color: #0d0d0d;
+}
+
+/* Hover do botão primário */
+.form-field__button--primary:hover {
+  background-color: var(--color-highlight);
+  color: var(--color-white);
+}
+
+/* Botão secundário */
+.form-field__button--secondary {
+  background-color: var(--color-grey-300);
+  color: var(--color-text);
+}
+
+/* Hover do botão secundário */
+.form-field__button--secondary:hover {
+  background-color: var(--color-option1);
+  color: var(--color-white);
+}
+
+/* Responsividade no mobile */
+@media (max-width: 600px) {
+  .form-field {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .form-field__button {
+    width: 100%;
+  }
+}

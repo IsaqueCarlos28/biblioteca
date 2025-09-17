@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Aprendendo os Blocos Fundamentais</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .bloco { border: 1px solid #ccc; margin: 20px 0; padding: 15px; }
+        .titulo { background: #f0f0f0; padding: 10px; margin: -15px -15px 15px -15px; }
+        input, button { padding: 8px; margin: 5px; }
+        .resultado { background: #e8f5e8; padding: 10px; margin: 10px 0; }
+        .lista { background: #f9f9f9; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>CRUD - Construindo Bloco por Bloco</h1>
+    
+    <!-- BLOCO 1: PEGAR VALOR DO HTML -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 1: Como pegar um valor do HTML para o JavaScript</div>
+        <input type="text" id="meuInput" placeholder="Digite algo aqui">
+        <button onclick="pegarValor()">Pegar Valor</button>
+        <div class="resultado" id="resultado1"></div>
+        
+        <p><strong>O que você precisa saber:</strong></p>
+        <p>• Para pegar um valor: <code>document.getElementById('id').value</code></p>
+        <p>• Todo input precisa ter um ID único</p>
+    </div>
+
+    <!-- BLOCO 2: JOGAR VALOR DO JS NO HTML -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 2: Como jogar um valor do JavaScript no HTML</div>
+        <button onclick="jogarValor()">Colocar Texto na Tela</button>
+        <div class="resultado" id="resultado2"></div>
+        
+        <p><strong>O que você precisa saber:</strong></p>
+        <p>• Para mostrar algo: <code>document.getElementById('id').innerHTML = 'texto'</code></p>
+        <p>• innerHTML coloca HTML, textContent coloca só texto</p>
+    </div>
+
+    <!-- BLOCO 3: ARRAY COMO BANCO DE DADOS -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 3: Array como "banco de dados"</div>
+        <button onclick="mostrarArray()">Ver o Array</button>
+        <button onclick="adicionarNoArray()">Adicionar Item</button>
+        <div class="resultado" id="resultado3"></div>
+        
+        <p><strong>O que você precisa saber:</strong></p>
+        <p>• Array guarda múltiplos valores: <code>let dados = []</code></p>
+        <p>• Adicionar: <code>dados.push(item)</code></p>
+        <p>• Ver tudo: <code>dados</code></p>
+    </div>
+
+    <!-- BLOCO 4: FUNÇÃO BÁSICA -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 4: Como criar uma função</div>
+        <button onclick="minhaFuncao()">Executar Função</button>
+        <div class="resultado" id="resultado4"></div>
+        
+        <p><strong>O que você precisa saber:</strong></p>
+        <p>• Estrutura: <code>function nome() { ... }</code></p>
+        <p>• Chamada: <code>nome()</code></p>
+        <p>• Função organiza código e pode ser reutilizada</p>
+    </div>
+
+    <!-- BLOCO 5: EVENTO DE FORMULÁRIO -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 5: Como capturar envio de formulário</div>
+        <form id="meuForm">
+            <input type="text" id="inputForm" placeholder="Digite algo" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="resultado" id="resultado5"></div>
+        
+        <p><strong>O que você precisa saber:</strong></p>
+        <p>• <code>addEventListener('submit', função)</code></p>
+        <p>• <code>e.preventDefault()</code> impede recarregar a página</p>
+        <p>• Formulário é a forma padrão de capturar dados</p>
+    </div>
+
+    <!-- BLOCO 6: LOOP PARA MOSTRAR LISTA -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 6: Como mostrar uma lista na tela</div>
+        <button onclick="mostrarLista()">Mostrar Lista</button>
+        <div class="lista" id="minhaLista"></div>
+        
+        <p><strong>O que você precisa saber:</strong></p>
+        <p>• <code>forEach()</code> percorre cada item do array</p>
+        <p>• Construir HTML com template strings: <code>`&lt;div&gt;${item}&lt;/div&gt;`</code></p>
+    </div>
+
+    <!-- BLOCO 7: CRUD SIMPLES -->
+    <div class="bloco">
+        <div class="titulo">BLOCO 7: CRUD Simples - Juntando Tudo</div>
+        <form id="crudForm">
+            <input type="text" id="itemInput" placeholder="Digite um item" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <div class="lista" id="crudLista"></div>
+        
+        <p><strong>Agora você sabe construir um CRUD porque domina:</strong></p>
+        <p>• Pegar dados do HTML ✓</p>
+        <p>• Guardar em array ✓</p> 
+        <p>• Mostrar na tela ✓</p>
+        <p>• Capturar eventos ✓</p>
+    </div>
+
+    <script>
+        let meuArray = ['item1','item2','item3'];
+        let crudItems = [];
+        let idCounter = 1;
+
+        
+     
+
+        //declaraçao de funçao classica:
+        function pegarValor() {
+            // pega o elemento desejado do html
+            const input = document.getElementById('meuInput');
+            // pega o valor do elemento
+            const valor = input.value;
+            document.getElementById('resultado1').innerHTML = `Voce digitou ${valor}`;
+
+        }
+
+        //Declaraçao de funçao nova:
+        const jogarValor = () => {
+            const textoParaMostrar = "Hello";
+            const local = document.getElementById('resultado2')
+            local.innerHTML = textoParaMostrar;
+        }
+
+        function mostrarArray (){
+            documento.getElementById('esultado3').innerHTML = 'Array atual' + JSON.stringify(meuArray);
+
+        }
+
+        function adicionarNoArray(){
+            const novoItem = 'Novo Item' + (meuArray.length + 1);
+            //funcao interadora que adiciona elemento no Array
+            meuArray.push(novoItem);
+            mostrarArray();
+        }
+
+        function minhaFuncao(){
+            const msg = "Hello Word";
+            document.getElementById('resultado4').innerHTML = msg;
+        }
+
+        document.getElementById('meuForm').addEventListener('submit',function(e){
+            //impede que a pagina recarregue, com o objetivo de neo perder o dados
+            e.preventDefault();
+            const valor = document.getElementById('inputForm').value;
+            document.getElementById('resultado5').innerHTML = valor;
+            document.getElementById('inputForm').value = "";
+        })
+
+        //6
+        function mostrarLista(){
+            const conteiner = document.getElementById('minhaLista');
+            let html = '';
+            meuArray.forEach(function (item,index) {
+                html += '<div>' + item + '</div>'
+            })
+            conteiner.innerHTML = html;
+        }
+
+        //7
+        function adicionarItem(texto){
+            const novoItem = {
+                id: idCounter++,
+                texto: texto
+            }
+            crudItems.push(novoItem)
+        }
+        function mostrarItens(){
+            const conteiner = document.getElementById('crudLista');
+            if(crudItems.length === 0){
+                conteiner.innerHTML = "<p> Vazio </p>"
+                return;
+            }
+            let html ='';
+            crudItems.forEach(function (item){
+                html += `
+                <div style="border: 1px solid #ddd; padding: 10px;">
+                    ${item.texto}    
+                    <button onclick="removerItem(${item.id})">REMOVER</button>
+                    </div>
+                `;
+            })
+        }
+        function removerItem(id) {
+            const index = crudItems.findIndex(i => i.id === id);
+            if(index !== -1){
+                crudItems.splice(index, 1);
+                mostrarLista();
+            }
+            
+        }
+        document.addEventListener('DOMContentLoaded',function () {
+            document.getElementById('crudForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const input = document.getElementById('itemInput');
+                const valor = input.value.trim();
+
+                if(valor === ''){
+                    alert('digite algo')
+                    return;
+                }
+                adicionarItem(valor);
+                mostrarItens();
+                input.value = '';
+                
+
+            })
+            mostrarItens();
+        })
+        
+    
+    </script>
+</body>
+</html>

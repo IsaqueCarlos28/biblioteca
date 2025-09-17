@@ -1,0 +1,71 @@
+@import "../variables.css";
+.alert {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 16px 0;
+  background-color: var(--alert-bg-color);
+  color: var(--alert-text-color);
+  box-shadow: var(--box-shadow);
+}
+.alert__icon {
+  margin-right: 12px;
+  font-size: 1.5rem;
+}
+.alert__close {
+  margin-left: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--close-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.alert__close:hover {
+  color: var(--close-hover-color);
+}
+.alert--success {
+  background-color: var(--alert-success-bg);
+  color: var(--alert-success-text);
+}
+.alert--success-hover:hover {
+  background-color: var(--alert-success-bg-hover);
+  cursor: pointer;
+}
+.alert--error {
+  background-color: var(--alert-error-bg,);
+  color: var(--alert-error-text);
+}
+.alert--error-hover:hover {
+  background-color: var(--alert-error-bg-hover);
+  cursor: pointer;
+}
+.alert--warning {
+  background-color: var(--alert-warning-bg);
+  color: var(--alert-warning-text);
+}
+.alert--warning-hover:hover {
+  background-color: var(--alert-warning-bg-hover);
+}
+
+/*alert pequeno*/
+.alert--small {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+  .alert {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.9rem;
+  }
+  .alert__icon {
+    margin-right: 8px;
+  }
+  .alert__close {
+    margin-left: 0;
+  }
+}

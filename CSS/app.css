@@ -1,0 +1,50 @@
+@import "/Aula06/CSS/atomic/variables.css";
+
+/*Atomic
+
+@import "/Aula06/CSS/atomic/atoms/autho-info.css";
+@import "/Aula06/CSS/atomic/atoms/badge.css";
+
+@import "/Aula06/CSS/atomic/atoms/price.css";
+@import "/Aula06/CSS/atomic/atoms/progress-bar.css";
+@import "/Aula06/CSS/atomic/atoms/tabs.css";
+@import "/Aula06/CSS/atomic/atoms/text.css";
+*/
+@import "/Aula06/CSS/atomic/atoms/buttom.css";
+/*Molecules
+
+@import "/Aula06/CSS/atomic/molecules/alert.css";
+@import "/Aula06/CSS/atomic/molecules/card.css";
+*/
+@import "/Aula06/CSS/atomic/molecules/card.css";
+
+/*Organisms*/
+@import "/Aula06/CSS/atomic/organism/form-field.css";
+@import "/Aula06/CSS/atomic/organism/painel-admin.css";
+@import "/Aula06/CSS/atomic/organism/book-card.css";
+@import "/Aula06/CSS/atomic/organism/book.css";
+@import "/Aula06/CSS/atomic/organism/catalog.css";
+@import "/Aula06/CSS/atomic/organism/header.css";
+@import "/Aula06/CSS/atomic/organism/nav-bar.css";
+@import "/Aula06/CSS/atomic/organism/footer.css";
+
+body{
+    background-color:var(--background-color);
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criar_editar{
+    display:flex;
+    justify-content: space-around;
+}
+
+.adm_title{
+    font-family: var(--font-family-base);
+    
+    margin: auto;
+}
